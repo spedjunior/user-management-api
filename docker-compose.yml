@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mariadb:
+    image: mariadb:lts
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
