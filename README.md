@@ -78,3 +78,11 @@ Criar o arquivo .prettierrc
 ### Solução para o envio de email
 
 https://mailtrap.io/
+
+
+
+# OpenTelemetry
+
+
+A instrumetação do opentelemetry se encontra no arquivo [instrumentation.ts](src/instrumentation.ts)
+
