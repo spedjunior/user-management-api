@@ -5,11 +5,23 @@ services:
     container_name: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydb
+      MYSQL_ROOT_PASSWORD: myroot
+      MYSQL_DATABASE: api_ts
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
     ports:
       - "3306:3306"
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./mysql_tmp:/var/lib/mysql
+      - ./mysql_init.sql:/docker-entrypoint-initdb.d/mysql_init.sql
+  phpadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_USER: myuser
+      PMA_PASSWORD: mypassword
+    ports:
+      - "8080:80"
