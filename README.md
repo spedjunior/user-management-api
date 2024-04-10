@@ -1,13 +1,19 @@
 ### Objetivo
 
-Criar uma api em typescript
+O objetivo desse projeto é criar um template de api para Typescript/NodeJS/Express
+
+
 
 # Setup
 
-[] Typescript
-[] Eslint
-[] Prettier
-[] Jest
+- [X] Typescript
+- [X] Express
+- [X] Eslint
+- [X] Prettier
+- [X] OpenAPI
+- [X] OpenTelemetry/Prometheus/New Relic
+- [X] Docker
+- [] Jest
 
 ### Criar o .gitignore
 
