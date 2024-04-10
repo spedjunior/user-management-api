@@ -18,8 +18,9 @@ export class CreateUserUseCase {
       }
       const user = new User(data.name, data.email, data.password);
 
-      console.log(`Created user ${JSON.stringify(user)}`)
       await this.usersRepository.save(user);
+      console.log(`Created user ${JSON.stringify(user)}`)
+
 
       await this.mailProvider.sendMail({
          to: {
